@@ -24,6 +24,7 @@ void write_angles(const int down_servo_angle, const int middle_servo_angle, cons
   DownServo.write(down_servo_angle);
   delay(STD_DELAY);
   UpperServo.write(upper_servo_angle);
+  delay(STD_DELAY);
   MiddleServo.write(middle_servo_angle);  
 }
 
@@ -33,6 +34,27 @@ void move_to_pos_0() {
   const int middle_servo_angle = 50;
   const int upper_servo_angle = 40;
 
+  write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
+}
+
+void move_to_pos_1() {
+  const int down_servo_angle = 90;
+  const int middle_servo_angle = 29;
+  const int upper_servo_angle = 60;
+  write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
+}
+
+void move_to_pos_2() {
+  const int down_servo_angle = 75;
+  const int middle_servo_angle = 30;
+  const int upper_servo_angle = 60;
+  write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
+}
+
+void move_to_pos_3() {
+  const int down_servo_angle = 59;
+  const int middle_servo_angle = 29;
+  const int upper_servo_angle = 68;
   write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
 }
 
@@ -96,7 +118,7 @@ void setup() {
 
 
 void loop() {
-  /*delay(BTW_POS_DELAY);
+  delay(BTW_POS_DELAY);
   move_to_pos_9();
   
   delay(BTW_POS_DELAY);
@@ -106,38 +128,29 @@ void loop() {
   move_to_pos_7();
 
   delay(BTW_POS_DELAY);
-  move_to_home_pos();*/
+  move_to_home_pos();
 
   delay(BTW_POS_DELAY);
-  move_to_pos_4();
+  move_to_pos_6();
   
   delay(BTW_POS_DELAY);
   move_to_pos_5();
   
   delay(BTW_POS_DELAY);
-  move_to_pos_6();
+  move_to_pos_4();
 
   delay(BTW_POS_DELAY);
   move_to_home_pos();
-  /*for (; servo_position <= 90; ++servo_position) {
-    DownServo.write(servo_position);
-    delay(DELAY);
 
-    MiddleServo.write(servo_position);
-    delay(DELAY);
+  delay(BTW_POS_DELAY);
+  move_to_pos_3();
+  
+  delay(BTW_POS_DELAY);
+  move_to_pos_2();
+  
+  delay(BTW_POS_DELAY);
+  move_to_pos_1();
 
-    UpperServo.write(servo_position);
-    delay(DELAY);
-    }
-
-    for (servo_position = 90; servo_position > 0; --servo_position) {
-    DownServo.write(servo_position);
-    delay(DELAY);
-
-    MiddleServo.write(servo_position);
-    delay(DELAY);
-
-    UpperServo.write(servo_position);
-    delay(DELAY);
-    }*/
+  delay(BTW_POS_DELAY);
+  move_to_home_pos();
 }
