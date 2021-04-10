@@ -4,6 +4,7 @@
 #define S3_PIN 4
 
 #define STD_DELAY 1500
+#define BTW_POS_DELAY 1500
 #define DELAY 30
 
 Servo DownServo;
@@ -35,9 +36,29 @@ void move_to_pos_0() {
   write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
 }
 
-void move_to_pos_8() {
-
+void move_to_pos_5() {
   const int down_servo_angle = 75;
+  const int middle_servo_angle = 30;
+  const int upper_servo_angle = 40;
+  write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
+}
+
+void move_to_pos_6() {
+  const int down_servo_angle = 51;
+  const int middle_servo_angle = 29;
+  const int upper_servo_angle = 44;
+  write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
+}
+
+void move_to_pos_7() {
+  const int down_servo_angle = 110;
+  const int middle_servo_angle = 29;
+  const int upper_servo_angle = 24;
+  write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
+}
+
+void move_to_pos_8() {
+  const int down_servo_angle = 80;
   const int middle_servo_angle = 29;
   const int upper_servo_angle = 24;
   write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
@@ -45,7 +66,7 @@ void move_to_pos_8() {
 
 void move_to_pos_9() {
   const int down_servo_angle = 40;
-  const int middle_servo_angle = 30;
+  const int middle_servo_angle = 29;
   const int upper_servo_angle = 28;
   write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
 }
@@ -68,13 +89,28 @@ void setup() {
 
 
 void loop() {
-  delay(STD_DELAY);
+  /*delay(BTW_POS_DELAY);
   move_to_pos_9();
   
-  delay(STD_DELAY);
+  delay(BTW_POS_DELAY);
   move_to_pos_8();
+  
+  delay(BTW_POS_DELAY);
+  move_to_pos_7();
 
-  delay(STD_DELAY);
+  delay(BTW_POS_DELAY);
+  move_to_home_pos();*/
+
+  delay(BTW_POS_DELAY);
+  move_to_pos_6();
+  
+  delay(BTW_POS_DELAY);
+  move_to_pos_5();
+  
+  delay(BTW_POS_DELAY);
+  move_to_pos_7();
+
+  delay(BTW_POS_DELAY);
   move_to_home_pos();
   /*for (; servo_position <= 90; ++servo_position) {
     DownServo.write(servo_position);
