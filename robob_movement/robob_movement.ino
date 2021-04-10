@@ -11,21 +11,17 @@ Servo DownServo;
 Servo MiddleServo;
 Servo UpperServo;
 
-int servo_position = 0;
 const int moving_height = 50;
 
-int this_down_servo_angle;
-int this_middle_servo_angle;
-int this_upper_servo_angle;
-
 void write_angles(const int down_servo_angle, const int middle_servo_angle, const int upper_servo_angle) {
+
   MiddleServo.write(moving_height);
   delay(STD_DELAY);
   DownServo.write(down_servo_angle);
   delay(STD_DELAY);
   UpperServo.write(upper_servo_angle);
   delay(STD_DELAY);
-  MiddleServo.write(middle_servo_angle);  
+  MiddleServo.write(middle_servo_angle);
 }
 
 void move_to_pos_0() {
@@ -120,10 +116,10 @@ void setup() {
 void loop() {
   delay(BTW_POS_DELAY);
   move_to_pos_9();
-  
+
   delay(BTW_POS_DELAY);
   move_to_pos_8();
-  
+
   delay(BTW_POS_DELAY);
   move_to_pos_7();
 
@@ -132,10 +128,10 @@ void loop() {
 
   delay(BTW_POS_DELAY);
   move_to_pos_6();
-  
+
   delay(BTW_POS_DELAY);
   move_to_pos_5();
-  
+
   delay(BTW_POS_DELAY);
   move_to_pos_4();
 
@@ -144,10 +140,10 @@ void loop() {
 
   delay(BTW_POS_DELAY);
   move_to_pos_3();
-  
+
   delay(BTW_POS_DELAY);
   move_to_pos_2();
-  
+
   delay(BTW_POS_DELAY);
   move_to_pos_1();
 
