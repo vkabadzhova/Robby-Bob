@@ -488,13 +488,13 @@ int GetButton()
   if (btnRow3 >= MAGIC_NUM_MIDDLE && btnRow3 <= MAGIC_NUM_MIDDLE + buffer_range) return 7;
   if (btnRow3 >= MAGIC_NUM_RIGHT && btnRow3 <= MAGIC_NUM_RIGHT + buffer_range) return 8;
 
-    Serial.print("btnRow1 :");
+    /*Serial.print("btnRow1 :");
     Serial.println(btnRow1);
     Serial.print("btnRow2 :");
     Serial.println(btnRow2);
     Serial.print("btnRow3 :");
     Serial.println(btnRow3);
-    delay(500);
+    delay(500);*/
   
   return -1;
 }
