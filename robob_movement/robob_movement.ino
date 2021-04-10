@@ -13,42 +13,41 @@ Servo UpperServo;
 int servo_position = 0;
 const int moving_height = 50;
 
-int this_down_angle;
-int this_middle_angle;
-int this_upper_angle;
+int this_down_servo_angle;
+int this_middle_servo_angle;
+int this_upper_servo_angle;
 
-void write_angles(const int down_angle, const int middle_angle, const int upper_angle) {
+void write_angles(const int down_servo_angle, const int middle_servo_angle, const int upper_servo_angle) {
   MiddleServo.write(moving_height);
   delay(STD_DELAY);
-  DownServo.write(down_angle);
+  DownServo.write(down_servo_angle);
   delay(STD_DELAY);
-  UpperServo.write(upper_angle);
-  MiddleServo.write(middle_angle);  
+  UpperServo.write(upper_servo_angle);
+  MiddleServo.write(middle_servo_angle);  
 }
 
 void move_to_pos_0() {
 
-  const int down_angle = 25;
-  const int middle_angle = 50;
-  const int upper_angle = 40;
+  const int down_servo_angle = 25;
+  const int middle_servo_angle = 50;
+  const int upper_servo_angle = 40;
 
-  write_angles(down_angle, middle_angle, upper_angle);
+  write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
 }
 
 void move_to_pos_8() {
 
-  const int down_angle = 75;
-  const int middle_angle = 29;
-  const int upper_angle = 24;
-  write_angles(down_angle, middle_angle, upper_angle);
+  const int down_servo_angle = 75;
+  const int middle_servo_angle = 29;
+  const int upper_servo_angle = 24;
+  write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
 }
 
 void move_to_pos_9() {
-
-  const int down_angle = 40;
-  const int middle_angle = 40;
-  const int upper_angle = 33;
-  write_angles(down_angle, middle_angle, upper_angle);
+  const int down_servo_angle = 40;
+  const int middle_servo_angle = 30;
+  const int upper_servo_angle = 28;
+  write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
 }
 
 void move_to_home_pos() {
@@ -69,8 +68,8 @@ void setup() {
 
 
 void loop() {
-  //delay(STD_DELAY);
-  //move_to_pos_9();
+  delay(STD_DELAY);
+  move_to_pos_9();
   
   delay(STD_DELAY);
   move_to_pos_8();
