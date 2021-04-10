@@ -36,6 +36,13 @@ void move_to_pos_0() {
   write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
 }
 
+void move_to_pos_4() {
+  const int down_servo_angle = 98;
+  const int middle_servo_angle = 29;
+  const int upper_servo_angle = 40;
+  write_angles(down_servo_angle, middle_servo_angle, upper_servo_angle);
+}
+
 void move_to_pos_5() {
   const int down_servo_angle = 75;
   const int middle_servo_angle = 30;
@@ -102,13 +109,13 @@ void loop() {
   move_to_home_pos();*/
 
   delay(BTW_POS_DELAY);
-  move_to_pos_6();
+  move_to_pos_4();
   
   delay(BTW_POS_DELAY);
   move_to_pos_5();
   
   delay(BTW_POS_DELAY);
-  move_to_pos_7();
+  move_to_pos_6();
 
   delay(BTW_POS_DELAY);
   move_to_home_pos();
