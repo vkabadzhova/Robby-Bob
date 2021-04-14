@@ -6,7 +6,7 @@
 #define S2_PIN 3
 #define S3_PIN 4
 
-#define STD_DELAY 1500
+#define STD_DELAY 1000
 #define BTW_POS_DELAY 1500
 #define DELAY 30
 
@@ -19,11 +19,11 @@ const int moving_height = 50;
 void write_angles(const int down_servo_angle, const int middle_servo_angle, const int upper_servo_angle) {
 
   MiddleServo.write(moving_height);
-  delay(STD_DELAY);
+  delay(BTW_POS_DELAY);
   DownServo.write(down_servo_angle);
-  delay(STD_DELAY);
+  delay(BTW_POS_DELAY);
   UpperServo.write(upper_servo_angle);
-  delay(STD_DELAY);
+  delay(BTW_POS_DELAY);
   MiddleServo.write(middle_servo_angle);
 }
 
@@ -102,7 +102,7 @@ void move_to_pos_1() {
 
 void move_to_home_pos() {
   MiddleServo.write(moving_height);
-  delay(STD_DELAY);
+  delay(BTW_POS_DELAY);
   move_to_pos_0();
 }
 

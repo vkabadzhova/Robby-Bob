@@ -31,6 +31,7 @@ void move_to_position(const int row, const int col) {
   boardState[row][col] = 2;
 
   move_to_home_pos();
+  delay(STD_DELAY);
 }
 
 bool BlockPlayerWin()
@@ -198,7 +199,7 @@ bool FindComputerWin()
 void ComputerMove()
 {
   bool done = false;
-  delay(1000);
+  delay(STD_DELAY);
   if (totalGameMoves == 1)
   {
     //if first player move isn't the center, take the center
@@ -456,7 +457,7 @@ int GetButton()
 }
 
 void DrawTicTacToe() {
-  for (short i = 0; i < 20; ++i) {
+  for (short i = 0; i < 40; ++i) {
     Serial.println();
   }
 
@@ -479,7 +480,7 @@ void DrawTicTacToe() {
     Serial.println("\n");
   }
 
-  for (int i = 0; i < 3; ++i) {
+  for (int i = 0; i < 10; ++i) {
     Serial.println();
   }
 }

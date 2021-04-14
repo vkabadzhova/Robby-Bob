@@ -9,13 +9,15 @@ void setup() {
   move_to_pos_0();
   delay(STD_DELAY);
 
-  randomSeed(analogRead(0));
+  randomSeed(analogRead(5));
 
   for (int i = 0; i < ROWS_NUM; ++i) {
     for (int j = 0; j < COLS_NUM; ++j) {
       boardState[i][j] = 0;
     }
   }
+  
+  DrawTicTacToe();
 
   Serial.begin(9600);
 }
@@ -34,7 +36,7 @@ void loop() {
   totalGameMoves++;
 
   DrawTicTacToe();
-  delay(1000);
+  delay(STD_DELAY);
 
   if (HasWinner())
   {
@@ -49,9 +51,9 @@ void loop() {
   else
   {
     ComputerMove();
-    delay(1000);
+    delay(STD_DELAY);
     DrawTicTacToe();
-    delay(1000);
+    delay(STD_DELAY);
 
     if (HasWinner())
     {
