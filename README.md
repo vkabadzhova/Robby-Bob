@@ -33,7 +33,7 @@ Let's hook on
 [![Tic-Tac-Toe image](https://i.postimg.cc/Nf46rYdF/IMG-20210414-201504.jpg)](https://i.postimg.cc/Nf46rYdF/IMG-20210414-201504.jpg)
 
 
-Purpouses
+Purposes
 -------
 - to delight;
 - to help its creator get graduated in TUES for the academic year 2021 - 2022 (penultimate year; next year - quantum thesis. Stay tuned :notes:);
