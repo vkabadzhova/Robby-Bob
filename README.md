@@ -1,4 +1,8 @@
 # Robby Bob
+
+:point_right: Checkout the TUES Fest video [here](https://www.youtube.com/watch?v=UctWDCaG33o).
+
+------
 За тези, които разбирате този текст - посетете [Wiki](https://github.com/vkabadzhova/Robby-Bob/wiki/За-онези%2C-които-разбират-този-текст) страницата за повече информация. Очаквам ви!  :information_desk_person:
 
 ----------------------------------
